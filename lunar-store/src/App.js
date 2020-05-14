@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Navbar } from 'react-bootstrap';
+import Navbar from './components/Navbar';
+import ProducList from './components/ProducList';
+import Details from './components/Details';
+import Cart from './components/Cart';
+import Default from './components/Default';
 
-function App() {
-  return (
-    <React.Fragment>
-      <h3>hai</h3>
-    </React.Fragment>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Navbar></Navbar>
+        <ProducList></ProducList>
+        <Details></Details>
+        <Cart></Cart>
+        <Default></Default>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
