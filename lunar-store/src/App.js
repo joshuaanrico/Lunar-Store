@@ -9,6 +9,8 @@ import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
 
+
+
 class App extends Component {
   render() {
     return (
@@ -21,7 +23,7 @@ class App extends Component {
           <Route path='/cart' component={Cart} ></Route>
           <Route component={Default} ></Route>
         </Switch>
-
+        
       </React.Fragment>
     );
   }

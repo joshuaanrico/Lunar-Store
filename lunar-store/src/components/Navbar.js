@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../logo.svg'
-import 'font-awesome/css/font-awesome.min.css';
+import logo from '../logo.svg';
+
+import { FaShoppingCart } from 'react-icons/fa';
 
 export default class Navbar extends Component {
 	render() {
@@ -44,7 +45,7 @@ export default class Navbar extends Component {
 			    
 			    {/* Navbar yg kanan */}
 				<a href="/Cart" class="btn btn-outline-success my-2 my-sm-0">
-					<i className="fas fa-cart-plus" /> My Cart
+						<FaShoppingCart size={25}></FaShoppingCart>&nbsp; My Cart
 				</a>
 
 			  </div>
