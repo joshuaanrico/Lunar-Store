@@ -7,11 +7,11 @@ export default class ProductList extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div class="py-5">
+				<div class="py-4">
 					<div class="container">
 			 		<h1 class="display-2">Our Products</h1>
 
-					<div class="row">
+					<div class="card-columns">
 						<ProductConsumer>
 							{value => {
 								return value.products.map( product => {
