@@ -16,8 +16,8 @@ const ProductContext = React.createContext();
     return (
       <ProductContext.Provider value={{
         ...this.state,
-        handleDetail:this.handleDetail,
-        addtoCart:this.addtoCart
+        handleDetail: this.handleDetail,
+        addToCart: this.addToCart
       }}>
         {this.props.children}
       </ProductContext.Provider>

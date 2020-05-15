@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import Title from './Title';
-import {ProductConsumer} from '../context';
+import { ProductConsumer } from '../context';
+
 export default class ProductList extends Component {
-	state={
-		products: storeProducts
-	};
 	render() {
-		console.log(this.state.products);
 		return (
 			<React.Fragment>
-				<div className="py-5">
-					<div className="container">
-			 		<Title name="our" title="products" />
+				<div class="py-5">
+					<div class="container">
+			 		<h1 class="display-2">Our Products</h1>
 
-					<div className="row">
+					<div class="row">
 						<ProductConsumer>
 							{value => {
 								return value.products.map( product => {
-									return <Product key={product.id} product={product}/>;
-								})
+									return <Product key={product.id} product={product} />;
+								});
 							}}
 						</ProductConsumer>
 					</div>
