@@ -8,7 +8,7 @@ export default class Navbar extends Component {
 	render() {
 		return (
 
-			<NavWrapper class="navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				{/* Logo dan nama Store */}
 				<a class="navbar-brand" href="#">
 					<img src={logo} width="50" height="30" class="d-inline-block align-top" alt="" />
@@ -45,22 +45,20 @@ export default class Navbar extends Component {
 
 			    {/* Navbar yg kanan */}
 				<a href="/Cart" class="btn btn-outline-success my-2 my-sm-0">
-
-						<FaShoppingCart size={25}></FaShoppingCart>&nbsp; My Cart
-
+					<FaShoppingCart size={25}></FaShoppingCart>&nbsp; My Cart
 				</a>
 			  </div>
-			</NavWrapper>
+			</nav>
 		);
 	}
 }
 
 
-const NavWrapper = styled.nav'
-	background: var(--mainBlue);
-	.nav-link{
-		color: var(--mainWhite)!important;
-		font-size:1.3rem;
-		text-transfrom: capitalize;
-	}
-';
+// const NavWrapper = styled.nav'
+// 	background: var(--mainBlue);
+// 	.nav-link{
+// 		color: var(--mainWhite)!important;
+// 		font-size:1.3rem;
+// 		text-transfrom: capitalize;
+// 	}
+// ';
