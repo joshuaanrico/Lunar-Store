@@ -8,7 +8,7 @@ export default class Details extends Component {
 		return (
 			<ProductConsumer>
 				{value => {
-					const {id, company, img, info, price, title, inCart} = value.detailProduct;
+					const {id,company,img,info,priceshow,title,inCart} = value.detailProduct;
 					return (
 						<div class="container py-5">
 							{/* title */}
@@ -31,7 +31,7 @@ export default class Details extends Component {
 									</h4>
 									<h4 class="text-blue">
 										<strong>
-											Price: <span>Rp. </span> {price}
+											Price: <span>Rp. </span> {priceshow}
 										</strong>
 									</h4>
 									<p class="text-capitalize font-weight-bold mt-3 mb-0">
