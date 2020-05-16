@@ -11,7 +11,7 @@ body{
   color: var(--mainDark) !important;
 }
 .text-title {
-  font-family: "Permanent Marker", cursive;
+  font-family: monospace;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
@@ -24,8 +24,8 @@ body{
 
 /* modal container */
 .modal_container {
-  position: fixed; 
-  display: flex; 
+  position: fixed;
+  display: flex;
   top: 0;
   left: 0;
   right: 0;
@@ -33,11 +33,11 @@ body{
   background: rgba(0,0,0,0.3);
   align-items: center;
   justify-content: center;
-  
+
 }
 
 #modal {
-    background-color: var(--mainWhite);
+    background-color: #FCE4EC;
 }
 
 /* not found page */
@@ -141,4 +141,3 @@ body{
     font-size: 14px;
   }
 }
-

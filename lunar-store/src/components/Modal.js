@@ -9,7 +9,7 @@ export default class Modal extends Component {
       <ProductConsumer>
         {(value) => {
           const {modalOpen,closeModal} = value;
-          const {img, title, price} = value.modalProduct;
+          const {img, title, priceshow} = value.modalProduct;
 
           if(!modalOpen){
             return null;
@@ -22,15 +22,15 @@ export default class Modal extends Component {
                     <h5>item added to the cart</h5>
                     <img src={img} class="img-fluid" alt="product"/>
                     <h5>{title}</h5>
-                    <h5 class="text-muted"> Price : $ {price} </h5>
+                    <h5 class="text-muted"> Price : Rp. {priceshow} </h5>
                     <Link to="/">
                       <button class="btn btn-outline-success"  onClick={() => closeModal()} >
-                        store  
+                        Store
                       </button>
                     </Link>
                     <Link to="/cart">
                       <button class="btn btn-outline-success"  onClick={() => closeModal()} >
-                        go to cart
+                        Go To Cart
                       </button>
                     </Link>
                   </div>

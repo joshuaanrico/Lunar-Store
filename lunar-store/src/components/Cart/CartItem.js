@@ -2,7 +2,7 @@ import React from 'react';
 import { FaTrash } from 'react-icons/fa';
 
 export default function CartItem({ item, value }) {
-  const { id, title, img, price, total, count } = item;
+  const { id, title, img, priceshow, total, count } = item;
   const { increment, decrement, removeItem } = value;
   return (
     <div class="row my-2 text-capitalize text-center">
@@ -15,7 +15,7 @@ export default function CartItem({ item, value }) {
       </div>
       <div class="col-10 mx-auto col-lg-2">
         <span class="d-lg-none">price : </span>
-        {price}
+        {priceshow}
       </div>
       <div class="col-10 mx-auto col-lg-2 my-2 my-lg-0">
         <div class="d-flex justify-content-center">
@@ -33,7 +33,7 @@ export default function CartItem({ item, value }) {
         </div>
       </div>
       <div class="col-10 mx-auto col-lg-2">
-        <strong>item total : $ {total}</strong>
+        <strong>item total : Rp. {total}</strong>
       </div>
     </div>
   );
