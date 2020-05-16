@@ -20,16 +20,16 @@ export default function CartItem({ item, value }) {
       <div class="col-10 mx-auto col-lg-2 my-2 my-lg-0">
         <div class="d-flex justify-content-center">
           <div>
-            <span class="btn mx-1" onClick={() => decrement(id)} > - </span>
-            <span class="btn mx-1"> {count} </span>
-            <span class="btn mx-1" onClick={() => increment(id)} > + </span>
+            <span class="btn btn-outline-dark" onClick={() => decrement(id)} > - </span>
+            <span class="btn btn-outline-dark"> {count} </span>
+            <span class="btn btn-outline-dark" onClick={() => increment(id)} > + </span>
           </div>
         </div>
       </div>
       {/**/}
       <div class="col-10 mx-auto col-lg-2">
-        <div class="cart-icon" onClick={() => removeItem(id)} >
-          <FaTrash size={25}></FaTrash>
+        <div class="btn btn-outline-dark" onClick={() => removeItem(id)} >
+            <FaTrash size={25}></FaTrash>
         </div>
       </div>
       <div class="col-10 mx-auto col-lg-2">
