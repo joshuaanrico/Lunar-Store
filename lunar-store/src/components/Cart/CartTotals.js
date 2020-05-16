@@ -23,6 +23,7 @@ export default function CartTotals({ value }) {
 							<span class="text-title">total :</span>
 							<strong>$ {cartTotal}</strong>
 						</h5>
+						<a href="/" type="button" class="btn btn-success px-5" onClick={() => clearCart()} >Pay</a>
 					</div>
 				</div>
 			</div>
