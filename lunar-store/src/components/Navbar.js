@@ -10,7 +10,7 @@ export default class Navbar extends Component {
 
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				{/* Logo dan nama Store */}
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand">
 					<img src={logo} width="50" height="30" class="d-inline-block align-top" alt="" />
 				    Lunar Store
 				</a>
@@ -22,14 +22,16 @@ export default class Navbar extends Component {
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto">
 			      <li class="nav-item active">
-			        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			      	<Link to="/" class="nav-link">
+			      		Home <span class="sr-only">(current)</span>
+			        </Link>
 			      </li>
 			    </ul>
 
 			    {/* Navbar yg kanan */}
-				<a href="/Cart" class="btn btn-outline-success my-2 my-sm-0">
+				<Link to="/Cart" class="btn btn-outline-success my-2 my-sm-0">
 					<FaShoppingCart size={25}></FaShoppingCart>&nbsp; My Cart
-				</a>
+				</Link>
 			  </div>
 			</nav>
 		);

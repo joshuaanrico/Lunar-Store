@@ -9,5 +9,5 @@ export default function EmptyCart() {
         </div>
       </div>
     </div>
-  );
+  )
 }

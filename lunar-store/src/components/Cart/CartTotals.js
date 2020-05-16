@@ -8,9 +8,12 @@ export default function CartTotals({ value }) {
 			<div class="container">
 				<div class="row">
 					<div class="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right">
-						<a href="/" class="btn btn-outline-danger text-uppercase mb-3 px-5" type="button" onClick={() => clearCart()} >
-							clear cart
-						</a>
+						<Link to="/">
+							<button class="btn btn-outline-danger text-uppercase mb-3 px-5" type="button" onClick={() => clearCart()} >
+								clear cart
+							</button>
+						</Link>
+						
 						<h5>
 							<span class="text-title">subtotal :</span>
 							<strong>Rp. {cartSubTotal}</strong>
@@ -23,7 +26,9 @@ export default function CartTotals({ value }) {
 							<span class="text-title">total :</span>
 							<strong>Rp. {cartTotal}</strong>
 						</h5>
-						<a href="/" type="button" class="btn btn-success px-5" onClick={() => clearCart()} >Pay</a>
+						<Link to="/">
+							<button type="button" class="btn btn-success px-5" onClick={() => clearCart()} >Pay</button>
+						</Link>
 					</div>
 				</div>
 			</div>

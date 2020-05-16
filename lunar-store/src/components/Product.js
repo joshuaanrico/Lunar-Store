@@ -13,15 +13,20 @@ export default class Product extends Component {
 				<ProductConsumer>
 					{(value) => (
 						<div onClick={() => value.handleDetail(id)} >
-						  	<img class="card-img-top" src={img} alt="Card image cap" />
+							<Link to="/details">
+								<img class="card-img-top" src={img} alt="Card image cap" />	
+							</Link>
+						  	
 							<div class="card-body">
 							    <h5 class="card-title">{title}</h5>
 
 									<p>Rp. {priceshow}</p>
 							    <p class="card-text">Tersedia.</p>
-							    <a href="/details" class="btn btn-primary">Detail Product</a>
-							    <button class="btn btn-outline-warning" disabled={inCart ? true : false}
-							    	onClick={() => {
+                  <Link to="/details">
+									  <button class="btn btn-primary">Go somewhere</button>	
+								  </Link>
+							    <button class="btn btn-outline-warning" disabled={inCart ? true : false} 
+							    	onClick={() => { 
 								    	value.addToCart(id);
 										value.openModal(id);
 									}}
@@ -38,11 +43,11 @@ export default class Product extends Component {
 }
 
 Product.propTypes = {
-	product:PropTypes.shape({
-		id: PropTypes.number,
-		img: PropTypes.string,
-		title: PropTypes.string,
-		price: PropTypes.number,
-		inCart: PropTypes.bool,
-	}).isRequired
+  product: PropTypes.shape({
+      id: PropTypes.number,
+      img: PropTypes.string,
+      title: PropTypes.string,
+      price: PropTypes.number,
+      inCart: PropTypes.bool
+  }).isRequired
 };
