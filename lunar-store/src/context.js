@@ -7,7 +7,7 @@ class ProductProvider extends Component {
     products: [],
     detailProduct:detailProduct,
     cart:[],
-    modalOpen:true,
+    modalOpen:false,
     modalProduct:detailProduct,
   };
   componentDidMount(){
@@ -70,7 +70,7 @@ closeModal = id =>
         handleDetail: this.handleDetail,
         addToCart: this.addToCart,
         openModal:this.openModal,
-        closeModal:this,closeModal
+        closeModal:this.closeModal
       }}>
         {this.props.children}
       </ProductContext.Provider>
