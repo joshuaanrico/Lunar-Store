@@ -9,6 +9,9 @@ class ProductProvider extends Component {
     cart:[],
     modalOpen:false,
     modalProduct:detailProduct,
+    cartSubTotal: 0,
+    cartTax: 0,
+    cartTotal: 0,
   };
   componentDidMount(){
     this.setProducts();
@@ -62,7 +65,9 @@ closeModal = () =>{
     return {modalOpen:false};
   });
 };
-closeModal = id =>
+inCrement = (id) =>{
+  console.log('this is increment method');
+}
   render() {
     return (
       <ProductContext.Provider value={{
