@@ -26,12 +26,6 @@ export default class Navbar extends Component {
 			      		Home <span class="sr-only">(current)</span>
 			        </Link>
 			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Link</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link disabled" href="#">Disabled</a>
-			      </li>
 			    </ul>
 
 			    {/* Navbar yg kanan */}

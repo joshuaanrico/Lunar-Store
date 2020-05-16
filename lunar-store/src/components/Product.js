@@ -7,9 +7,9 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 export default class Product extends Component {
 	render() {
-		const {id, title, img, price, inCart} = this.props.product;
+		const {id, title, img, priceshow, inCart} = this.props.product;
 		return (
-			<div class="card bg-light mb-3" style={{width: "18rem"}}>
+			<div id="product" class="card mb-3" style={{width: "18rem"}}>
 				<ProductConsumer>
 					{(value) => (
 						<div onClick={() => value.handleDetail(id)} >
@@ -19,22 +19,22 @@ export default class Product extends Component {
 						  	
 							<div class="card-body">
 							    <h5 class="card-title">{title}</h5>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    
-								<p>$ {price}</p>
-								<Link to="/details">
-									<button class="btn btn-primary">Go somewhere</button>	
-								</Link>
+
+									<p>Rp. {priceshow}</p>
+							    <p class="card-text">Tersedia.</p>
+                  <Link to="/details">
+									  <button class="btn btn-primary">Go somewhere</button>	
+								  </Link>
 							    <button class="btn btn-outline-warning" disabled={inCart ? true : false} 
 							    	onClick={() => { 
 								    	value.addToCart(id);
 										value.openModal(id);
-									}} 
+									}}
 								>
 									{inCart?(<p class="text-capitalize mb-0" disabled>In Cart</p>):(<FaShoppingCart size={25}></FaShoppingCart>)}
 							    </button>
 						  	</div>
-						</div> 
+						</div>
 					)}
 				</ProductConsumer>
 			</div>

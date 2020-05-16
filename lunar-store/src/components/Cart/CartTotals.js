@@ -16,15 +16,15 @@ export default function CartTotals({ value }) {
 						
 						<h5>
 							<span class="text-title">subtotal :</span>
-							<strong>$ {cartSubTotal}</strong>
+							<strong>Rp. {cartSubTotal}</strong>
 						</h5>
 						<h5>
 							<span class="text-title">tax :</span>
-							<strong>$ {cartTax}</strong>
+							<strong>Rp. {cartTax}</strong>
 						</h5>
 						<h5>
 							<span class="text-title">total :</span>
-							<strong>$ {cartTotal}</strong>
+							<strong>Rp. {cartTotal}</strong>
 						</h5>
 						<Link to="/">
 							<button type="button" class="btn btn-success px-5" onClick={() => clearCart()} >Pay</button>
