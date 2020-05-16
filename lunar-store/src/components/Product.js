@@ -16,6 +16,7 @@ export default class Product extends Component {
 						  	<img class="card-img-top" src={img} alt="Card image cap" />
 							<div class="card-body">
 							    <h5 class="card-title">{title}</h5>
+
 									<p>Rp. {priceshow}</p>
 							    <p class="card-text">Tersedia.</p>
 							    <a href="/details" class="btn btn-primary">Detail Product</a>
