@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CartColumns() {
+export default function EmptyCart() {
   return (
     <div class="container mt-5">
       <div class="row">
