@@ -5,10 +5,10 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   state = {
     products: [],
-    detailProduct:detailProduct,
-    cart:storeProducts,
-    modalOpen:false,
-    modalProduct:detailProduct,
+    detailProduct: detailProduct,
+    cart: storeProducts,
+    modalOpen: false,
+    modalProduct: detailProduct,
     cartSubTotal: 0,
     cartTax: 0,
     cartTotal: 0
@@ -27,18 +27,19 @@ class ProductProvider extends Component {
     });
   };
 
-  getItem = id =>{
-    const product = this.state.products.find(item => item.id ===id);
+  getItem = id => {
+    const product = this.state.products.find(item => item.id === id);
     return product;
   };
 
   handleDetail = id => {
     const product = this.getItem(id);
     this.setState(() => {
-      return {detailProduct:product };
+      return { detailProduct: product };
     });
   };
-  addToCart = () => {
+
+  addToCart = id => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id));
     const product = tempProducts[index];
@@ -50,33 +51,33 @@ class ProductProvider extends Component {
       return { products: tempProducts,cart:[...this.state.cart,product]};
     },
      () => { console.log(this.state);
-    }
-  );
-};
+    });
+  };
 
-openModal = id => {
-  const product = this.getItem(id);
-  this.setState(() => {
-    return {modalProduct:product,modalOpen:true};
-  });
-};
-closeModal = () =>{
-  this.setState(() => {
-    return {modalOpen:false};
-  });
-};
-inCrement = (id) =>{
-  console.log('this is increment method');
-};
-decrement = (id) =>{
-  console.log('this is decrement method');
-};
-removeItem = (id) =>{
-  console.log('item removed');
-};
-clearCart = () =>{
-  console.log('cart was cleared');
-};
+  openModal = id => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return {modalProduct:product,modalOpen:true};
+    });
+  };
+
+  closeModal = () =>{
+    this.setState(() => {
+      return { modalOpen: false };
+    });
+  };
+  increment = (id) =>{
+    console.log('this is increment method');
+  };
+  decrement = (id) =>{
+    console.log('this is decrement method');
+  };
+  removeItem = (id) =>{
+    console.log('item removed');
+  };
+  clearCart = () =>{
+    console.log('cart was cleared');
+  };
   render() {
     return (
       <ProductContext.Provider value={{
@@ -85,12 +86,12 @@ clearCart = () =>{
         addToCart: this.addToCart,
         openModal: this.openModal,
         closeModal: this.closeModal,
-        inCrement: this.inCrement,
+        increment: this.increment,
         decrement: this.decrement,
         removeItem: this.removeItem,
         clearCart: this.clearCart
       }}>
-        {this.props.children}
+        {this.props.children} 
       </ProductContext.Provider>
     );
   }
