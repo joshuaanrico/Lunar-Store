@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom'
 import logo from '../logo.svg';
 
 import { FaShoppingCart } from 'react-icons/fa';
 
-export default class Navbar extends Component {
+class Landing extends Component {
 	logOut(e) {
 		e.preventDefault()
 	    localStorage.removeItem('usertoken')
@@ -74,6 +74,7 @@ export default class Navbar extends Component {
 	}
 }
 
+export default withRouter(Landing)
 
 
 // const NavWrapper = styled.nav'
