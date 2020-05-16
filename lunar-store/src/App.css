@@ -1,13 +1,13 @@
 :root {
-  --mainBlue : #2a2a72;
-  --lightBlue : #009ffd;
+  --mainPink : #F06292;
+  --lightPink : #FCE4EC;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainYellow: #ffa400;
 }
 body{
   font-family: 'Roboto', sans-serif !important;
-  background: var(--mainWhite) !important;
+  background: var(--lightPink) !important;
   color: var(--mainDark) !important;
 }
 .text-title {
@@ -16,10 +16,10 @@ body{
   text-transform: uppercase;
 }
 .text-blue {
-  color: var(--mainBlue);
+  color: var(--mainPink);
 }
 .text-bright {
-  color: var(--lightBlue);
+  color: var(--lightPink);
 }
 
 /* modal container */
@@ -34,6 +34,10 @@ body{
   align-items: center;
   justify-content: center;
 
+}
+
+#product {
+  background-color: #FCE4EC;
 }
 
 #modal {
@@ -117,6 +121,10 @@ body{
 .notfound a:hover {
   color: #ff6300;
   background: #211b19;
+}
+
+.Navbar {
+  background-color: #F8BBD0;
 }
 
 @media only screen and (max-width: 767px) {

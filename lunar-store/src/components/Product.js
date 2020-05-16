@@ -9,7 +9,7 @@ export default class Product extends Component {
 	render() {
 		const {id, title, img, priceshow, inCart} = this.props.product;
 		return (
-			<div class="card bg-light mb-3" style={{width: "18rem"}}>
+			<div id="product" class="card bg-light mb-3" style={{width: "18rem"}}>
 				<ProductConsumer>
 					{(value) => (
 						<div onClick={() => value.handleDetail(id)} >
