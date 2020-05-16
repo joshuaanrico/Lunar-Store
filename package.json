@@ -1,0 +1,23 @@
+{
+  "name": "lunar-store",
+  "version": "1.0.0",
+  "description": "Tugas Besar Pemrograman Web Lanjut, Toko Online Beauty And Fashion",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "styled-components": "^5.1.0",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^7.4.2",
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.15",
+    "nodemon": "^1.18.3"
+  }
+}

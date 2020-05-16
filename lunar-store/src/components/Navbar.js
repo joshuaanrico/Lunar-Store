@@ -1,11 +1,47 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom'
 import logo from '../logo.svg';
 
 import { FaShoppingCart } from 'react-icons/fa';
 
-export default class Navbar extends Component {
+class Landing extends Component {
+	logOut(e) {
+		e.preventDefault()
+	    localStorage.removeItem('usertoken')
+	    this.props.history.push(`/`)
+	}
+
 	render() {
+		const loginRegLink = (
+	      <ul className="navbar-nav">
+	        <li className="nav-item">
+	          <Link to="/login" className="nav-link">
+	            Login
+	          </Link>
+	        </li>
+	        <li className="nav-item">
+	          <Link to="/register" className="nav-link">
+	            Register
+	          </Link>
+	        </li>
+	      </ul>
+	    )
+
+	    const userLink = (
+	      <ul className="navbar-nav">
+	        <li className="nav-item">
+	          <Link to="/profile" className="nav-link">
+	            User
+	          </Link>
+	        </li>
+	        <li className="nav-item">
+	          <a href="" onClick={this.logOut.bind(this)} className="nav-link">
+	            Logout
+	          </a>
+	        </li>
+	      </ul>
+	    )
+
 		return (
 
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,7 +63,7 @@ export default class Navbar extends Component {
 			        </Link>
 			      </li>
 			    </ul>
-
+				{localStorage.usertoken ? userLink : loginRegLink}
 			    {/* Navbar yg kanan */}
 				<Link to="/Cart" class="btn btn-outline-success my-2 my-sm-0">
 					<FaShoppingCart size={25}></FaShoppingCart>&nbsp; My Cart
@@ -37,6 +73,8 @@ export default class Navbar extends Component {
 		);
 	}
 }
+
+export default withRouter(Landing)
 
 
 // const NavWrapper = styled.nav'
