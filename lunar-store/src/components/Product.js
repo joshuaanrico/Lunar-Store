@@ -12,7 +12,7 @@ export default class Product extends Component {
 			<div class="card bg-light mb-3" style={{width: "18rem"}}>
 				<ProductConsumer>
 					{(value) => (
-						<div class="img-container p-5" onClick={() => value.handleDetail(id)} >
+						<div onClick={() => value.handleDetail(id)} >
 						  	<img class="card-img-top" src={img} alt="Card image cap" />
 							<div class="card-body">
 							    <h5 class="card-title">{title}</h5>
@@ -24,7 +24,8 @@ export default class Product extends Component {
 							    </button>
 							    <p>$ {price}</p>
 						  	</div>
-						</div> )}
+						</div> 
+					)}
 				</ProductConsumer>
 			</div>
 		);
