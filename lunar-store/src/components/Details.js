@@ -30,7 +30,7 @@ export default class Details extends Component {
 									</h4>
 									<h4 class="text-blue">
 										<strong>
-											Price: <span>$</span> {price}	
+											Price: <span>$</span> {price}
 										</strong>
 									</h4>
 									<p class="text-capitalize font-weight-bold mt-3 mb-0">
@@ -41,9 +41,10 @@ export default class Details extends Component {
 									<div>
 										<a href="/" type="button" class="btn btn-primary">Back To Products</a>
 										&nbsp;&nbsp;
-										<a href="" type="button" class="btn btn-warning" disabled={inCart?true:false}  
+										<a href="" type="button" class="btn btn-warning" disabled={inCart?true:false}
 											onClick={() => {
 												value.addToCart(id);
+												value.openModal(id);
 											}}
 										>
 											{inCart ? "inCart" : "Add To Cart"}
@@ -51,8 +52,8 @@ export default class Details extends Component {
 									</div>
 								</div>
 							</div>
-							
-							
+
+
 						</div>
 					);
 				}}
