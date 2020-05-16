@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import {ProductConsumer} from '../context';
 import {Link} from 'react-router-dom';
-import Product from './Product';
 
 export default class Details extends Component {
 	render() {
 		return (
 			<ProductConsumer>
 				{value => {
-					const {id, company, img, info, price, title, inCart} = value.detailProduct;
+					const {id,company,img,info,priceshow,title,inCart} = value.detailProduct;
 					return (
 						<div class="container py-5">
 							{/* title */}
@@ -40,21 +39,17 @@ export default class Details extends Component {
 									<p class="text-muted lead">{info}</p>
 									{/* buttons */}
 									<div>
-										<Link to="/">
-											<button class="btn btn-primary">Back To Products</button>
-										</Link>
+										<a href="/" type="button" class="btn btn-primary">Back To Products</a>
 										&nbsp;&nbsp;
 
-										<button class="btn btn-warning"
-				                            disabled={inCart?true:false}
-				                            onClick={()=>{
-				                              value.addToCart(id);
-				                              value.openModal(id);
-				                            }}
-				                          >
-				                            {inCart ? "inCart":"add to cart"}
-				                          </button>
-
+										<button class="btn btn-warning" disabled={inCart ? true : false}
+									    	onClick={() => {
+										    	value.addToCart(id);
+												value.openModal(id);
+											}}
+										>
+											{inCart ? (<p>In Cart</p>) : "Add To Cart"}
+									    </button>
 									</div>
 								</div>
 							</div>
