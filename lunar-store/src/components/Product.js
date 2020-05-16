@@ -13,14 +13,18 @@ export default class Product extends Component {
 				<ProductConsumer>
 					{(value) => (
 						<div onClick={() => value.handleDetail(id)} >
-						  	<img class="card-img-top" src={img} alt="Card image cap" />
+							<Link to="/details">
+								<img class="card-img-top" src={img} alt="Card image cap" />	
+							</Link>
+						  	
 							<div class="card-body">
 							    <h5 class="card-title">{title}</h5>
 							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 							    
 								<p>$ {price}</p>
-								
-							    <a href="/details" class="btn btn-primary">Go somewhere</a>
+								<Link to="/details">
+									<button class="btn btn-primary">Go somewhere</button>	
+								</Link>
 							    <button class="btn btn-outline-warning" disabled={inCart ? true : false} 
 							    	onClick={() => { 
 								    	value.addToCart(id);
@@ -29,7 +33,6 @@ export default class Product extends Component {
 								>
 									{inCart?(<p class="text-capitalize mb-0" disabled>In Cart</p>):(<FaShoppingCart size={25}></FaShoppingCart>)}
 							    </button>
-							    
 						  	</div>
 						</div> 
 					)}
@@ -40,11 +43,11 @@ export default class Product extends Component {
 }
 
 Product.propTypes = {
-	product:PropTypes.shape({
-		id: PropTypes.number,
-		img: PropTypes.string,
-		title: PropTypes.string,
-		price: PropTypes.number,
-		inCart: PropTypes.bool,
-	}).isRequired
+  product: PropTypes.shape({
+      id: PropTypes.number,
+      img: PropTypes.string,
+      title: PropTypes.string,
+      price: PropTypes.number,
+      inCart: PropTypes.bool
+  }).isRequired
 };
