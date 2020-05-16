@@ -74,7 +74,7 @@ export default class Navbar extends Component {
 	}
 }
 
-export default withRouter(Landing)
+
 
 // const NavWrapper = styled.nav'
 // 	background: var(--mainBlue);
