@@ -94,7 +94,6 @@ class ProductProvider extends Component {
 
     product.count = product.count - 1;
     
-
     if (product.count === 0) {
       this.removeItem(id);
     }else{
@@ -105,8 +104,6 @@ class ProductProvider extends Component {
         this.addTotals()
       });
     }
-
-    
   };
 
   removeItem = (id) => {
