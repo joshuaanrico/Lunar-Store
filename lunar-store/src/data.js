@@ -103,6 +103,97 @@ export const storeProducts = [
     count: 0,
     total: 0,
     priceshow: "500.000,-"
+  },
+  {
+    id: 9,
+    title: "Sony Xperia XZ",
+    img: "img/product-9.jpg",
+    price: 850000,
+    company: "Sony",
+    info:
+      "Smartphone Xperia XZ dengan ukuran display 5.2 inch memiliki fitur kamera 23 MP/ 13 MP dengan fingerprint sensor sehingga cepat untuk secure unlock.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    priceshow: "850.000,-"
+  },
+  {
+    id: 10,
+    title: "Sony Xperia X Performance ",
+    img: "img/product-10.jpg",
+    price: 999000,
+    company: "Sony",
+    info:
+      "SONY Xperia X Performance berlayar 5 inches FHD tertanam Qualcomm Snapdragon 820 MSM8996 processor, 32GB Storage & 3GB RAM dan disupport LTE berkecepatan Cat9 450/50 Mbps.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    priceshow: "999.000,-"
+  },
+  {
+    id: 11,
+    title: "Oppo A5 2020",
+    img: "img/product-11.jpg",
+    price: 2400000,
+    company: "Oppo",
+    info:
+      "Oppo A5 2020 adalah HP keluaran dari perusahaan Oppo yang dirilis pada Oktober 2019. Memiliki spesifikasi Layar 6.5 inches, Chipset Qualcomm SDM665 Snapdragon 665 (11 nm), CPU Octa-core (4x2.0 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver), GPU Adreno 610, RAM 3GB/4GB, Memori Internal 64GB/128GB, Memory External microSDXC (dedicated slot), Kamera Belakang 12 MP, Kamera Depan 8 MP, Baterai Non-removable Li-Po 5000 mAh battery.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    priceshow: "2.400.000,-"
+  },
+  {
+    id: 12,
+    title: "Oppo A37",
+    img: "img/product-12.jpg",
+    price: 1499000,
+    company: "Oppo",
+    info:
+      "Oppo A37 adalah HP keluaran dari perusahaan Oppo yang dirilis pada Juni 2016. Memiliki spesifikasi Layar 5.0 inches, Chipset Qualcomm MSM8916 Snapdragon 410 (28 nm), CPU Quad-core 1.2 GHz Cortex-A53, GPU Adreno 3060, RAM 2GB, Memori Internal 16GB, Memory External microSDXC (dedicated slot), Kamera Belakang 8 MP, Kamera Depan 5 MP, Baterai Non-removable Li-Ion 2630 mAh battery.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    priceshow: "1.499.000,-"
+  },
+  {
+    id: 13,
+    title: "VIVO Y30",
+    img: "img/product-13.jpg",
+    price: 2799000,
+    company: "VIVO",
+    info:
+      "Vivo Y30 hadir dalam layar HD+ Ultra O 6,47'', AI Quad Camera, baterai 5000mAh mendukung reverse charging, dengan port USB Type-C, chipset Helio P35 dengan RAM 4GB.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    priceshow: "2.799.000,-"
+  },
+  {
+    id: 14,
+    title: "VIVO Z1 Pro",
+    img: "img/product-14.jpg",
+    price: 2295000,
+    company: "VIVO",
+    info:
+      "Vivo Z1 Pro merupakan handphone HP dengan kapasitas 5000mAh dan layar 6.5'' yang dilengkapi dengan kamera belakang 16 + 8 + 2MP dengan tingkat densitas piksel sebesar 395ppi dan tampilan resolusi sebesar 2340 x 1080pixels. Dengan berat sebesar 201g, handphone HP ini memiliki prosesor Octa Core.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    priceshow: "2.295.000,-"
+  },
+  {
+    id: 15,
+    title: "VIVO V17 Pro",
+    img: "img/product-15.jpg",
+    price: 3699000,
+    company: "VIVO",
+    info:
+      "Vivo V17 Pro perangkat pertama dengan dual pop-up selfie + Super Wide-Angle Selfie, quad-camera di belakang perangkat, layar FHD+ tanpa notch 6.44'', ditenagai Snapdragon 675 AIE dipadukan RAM 8GB, baterai 4100 mAh dengan Dual-Engine Fast Charging.",
+    inCart: false,
+    count: 0,
+    total: 0,
+    priceshow: "3.699.000,-"
   }
 ];
 
