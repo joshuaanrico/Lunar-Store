@@ -14,19 +14,19 @@ export default class Product extends Component {
 					{(value) => (
 						<div onClick={() => value.handleDetail(id)} >
 							<Link to="/details">
-								<img class="card-img-top" src={img} alt="Card image cap" />	
+								<img class="card-img-top" src={img} alt="Card image cap" />
 							</Link>
-						  	
+
 							<div class="card-body">
 							    <h5 class="card-title">{title}</h5>
 
 									<p>Rp. {priceshow}</p>
 							    <p class="card-text">Tersedia.</p>
                   <Link to="/details">
-									  <button class="btn btn-primary">Go somewhere</button>	
+									  <button class="btn btn-primary">Product Details</button>	
 								  </Link>
-							    <button class="btn btn-outline-warning" disabled={inCart ? true : false} 
-							    	onClick={() => { 
+							    <button class="btn btn-outline-warning" disabled={inCart ? true : false}
+							    	onClick={() => {
 								    	value.addToCart(id);
 										value.openModal(id);
 									}}
