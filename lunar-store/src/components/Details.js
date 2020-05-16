@@ -41,14 +41,15 @@ export default class Details extends Component {
 									<div>
 										<a href="/" type="button" class="btn btn-primary">Back To Products</a>
 										&nbsp;&nbsp;
-										<a href="" type="button" class="btn btn-warning" disabled={inCart?true:false}
-											onClick={() => {
-												value.addToCart(id);
+										
+										<button class="btn btn-warning" disabled={inCart ? true : false} 
+									    	onClick={() => { 
+										    	value.addToCart(id);
 												value.openModal(id);
-											}}
+											}} 
 										>
-											{inCart ? "inCart" : "Add To Cart"}
-										</a>
+											{inCart ? (<p>In Cart</p>) : "Add To Cart"}
+									    </button>
 									</div>
 								</div>
 							</div>
