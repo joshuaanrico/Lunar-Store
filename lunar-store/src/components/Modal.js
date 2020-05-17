@@ -25,9 +25,10 @@ export default class Modal extends Component {
                     <h5 class="text-muted"> Price : Rp. {priceshow} </h5>
                     <Link to="/">
                       <button class="btn btn-outline-success"  onClick={() => closeModal()} >
-                        Store
+                        Back To Store
                       </button>
                     </Link>
+                    &nbsp;&nbsp;
                     <Link to="/cart">
                       <button class="btn btn-outline-success"  onClick={() => closeModal()} >
                         Go To Cart

@@ -36,10 +36,15 @@ class Landing extends Component {
 	        </li>
 	        <li className="nav-item">
 	          <a href="" onClick={this.logOut.bind(this)} className="nav-link">
-	            Logout
+	            Logout &nbsp;&nbsp;
 	          </a>
 	        </li>
+	        {/* Navbar yg kanan */}
+				<Link to="/Cart" class="btn btn-outline-success my-2 my-sm-0">
+					<FaShoppingCart size={25}></FaShoppingCart>&nbsp; My Cart
+				</Link>
 	      </ul>
+
 	    )
 
 		return (
@@ -64,10 +69,6 @@ class Landing extends Component {
 			      </li>
 			    </ul>
 				{localStorage.usertoken ? userLink : loginRegLink}
-			    {/* Navbar yg kanan */}
-				<Link to="/Cart" class="btn btn-outline-success my-2 my-sm-0">
-					<FaShoppingCart size={25}></FaShoppingCart>&nbsp; My Cart
-				</Link>
 			  </div>
 			</nav>
 		);

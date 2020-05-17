@@ -34,6 +34,11 @@ export default class Details extends Component {
 											Price: <span>Rp. </span> {priceshow}
 										</strong>
 									</h4>
+									<h4 class="text-blue">
+										<strong>
+											Your Rating:
+										</strong>
+									</h4>
 									<p class="text-capitalize font-weight-bold mt-3 mb-0">
 										Some info about products:
 									</p>
@@ -44,7 +49,7 @@ export default class Details extends Component {
 											<button class="btn btn-primary">Back To Products</button>
 										</Link>
 										&nbsp;&nbsp;
-
+										{localStorage.usertoken ? (
 										<button class="btn btn-warning"
 				                            disabled={inCart?true:false}
 				                            onClick={()=>{
@@ -53,7 +58,8 @@ export default class Details extends Component {
 				                            }}
 				                          >
 				                            {inCart ? "inCart":"add to cart"}
-				                          </button>
+				                        </button>
+				                        ) : (<p></p>)}
 									</div>
 								</div>
 							</div>
