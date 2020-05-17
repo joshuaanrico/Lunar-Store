@@ -34,11 +34,13 @@ export default class Details extends Component {
 											Price: <span>Rp. </span> {priceshow}
 										</strong>
 									</h4>
+									{localStorage.usertoken ? (
 									<h4 class="text-blue">
 										<strong>
 											Your Rating:
 										</strong>
 									</h4>
+									) : (<p></p>)}
 									<p class="text-capitalize font-weight-bold mt-3 mb-0">
 										Some info about products:
 									</p>
