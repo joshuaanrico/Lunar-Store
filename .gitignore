@@ -1,0 +1,10 @@
+# dependencies
+node_modules/
+
+# environment
+.env
+!lunar-store/.env
+
+# logs and OS files
+npm-debug.log*
+.DS_Store

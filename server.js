@@ -13,7 +13,7 @@ app.use(
   })
 )
 
-const mongoURI = 'mongodb://localhost:27017/mernloginreg'
+const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/mernloginreg'
 
 mongoose
   .connect(

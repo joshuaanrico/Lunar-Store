@@ -7,7 +7,8 @@ const bcrypt = require('bcrypt')
 const User = require('../models/User')
 users.use(cors())
 
-process.env.SECRET_KEY = 'secret'
+// Set SECRET_KEY in the environment for any real deployment
+process.env.SECRET_KEY = process.env.SECRET_KEY || 'dev-only-secret'
 
 users.post('/register', (req, res) => {
   const today = new Date()
